@@ -1,6 +1,6 @@
 imread
 matplotlib
-itertools
+more-itertools
 numpy
 openpyxl
 shutil
