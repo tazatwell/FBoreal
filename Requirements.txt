@@ -6,10 +6,4 @@ openpyxl
 pandas
 argparse
 pprint
-json
-subprocess
-difflib
-filecmp
 unittest
-shlex
-inspect
