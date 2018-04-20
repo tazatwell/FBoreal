@@ -1,5 +1,3 @@
-sys
-os
 imread
 matplotlib
 itertools
