@@ -3,7 +3,6 @@ matplotlib
 more-itertools
 numpy
 openpyxl
-ctypes
 pandas
 argparse
 pprint
