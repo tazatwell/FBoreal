@@ -21,6 +21,7 @@ instanceDir = join((dirname(thisdir)), "Instances")
 class TestExamples(unittest.TestCase):
 
     def setUp(self):
+        shutil.copy("../unix_FBPfunc5NODEBUG.so", "./FBPfunc5NODEBUG.so")
         self._tempfiles = []
         class_name, test_name = self.id().split('.')[-2:]
         self._csvbaselinename = join(baselineDir,
@@ -92,6 +93,16 @@ class TestExamples(unittest.TestCase):
                 
         self._tempfiles = []
 
+    def test_just_help(self):
+        # just a smoke test for help
+        class_name, test_name = self.id().split('.')[-2:]
+        tmpdir = os.path.join(thisdir, class_name+"_"+test_name)
+        self._tempfiles.append(tmpdir)
+        # use None and the argument for flags such as ignitions 
+        adict = {"help": None}
+        self._do_one("", "", adict)
+        self._cleanup()
+        
     def test_9CellsDet1k60min(self):
         # this one comes from 9CellsHom unlike most others
         ifolder = join(instanceDir, "9CellsHom")
