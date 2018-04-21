@@ -93,6 +93,13 @@ class TestExamples(unittest.TestCase):
                 
         self._tempfiles = []
 
+    def test_doing_nothing(self):
+        # just a smoke test for testing itself (e.g. setup)
+        class_name, test_name = self.id().split('.')[-2:]
+        tmpdir = os.path.join(thisdir, class_name+"_"+test_name)
+        self._tempfiles.append(tmpdir)
+        self._cleanup()
+        
     def test_just_help(self):
         # just a smoke test for help
         class_name, test_name = self.id().split('.')[-2:]
