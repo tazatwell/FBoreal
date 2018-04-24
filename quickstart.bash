@@ -5,7 +5,7 @@
 
 BASEDIR="/home/woodruff/Documents/Research/FBoreal"
 DDIR="$BASEDIR/Instances/9CellsHom/"
-TORUN="$BASEDIR/SimApril2018.py"
+TORUN="$BASEDIR/FBoreal/SimApril2018.py"
 
 python $TORUN --input-instance-folder=$DDIR --ignitions --nsims=1 --output-grid --plot --combine --ROS-Threshold=0.1 --output-folder=outdir --weather=rows
 
